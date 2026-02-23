@@ -1,0 +1,410 @@
+[
+  {
+    "slug": "alabama",
+    "state": "Alabama",
+    "abbreviation": "AL",
+    "foia_law": "Alabama Open Records Act",
+    "open_meetings_law": "Alabama Open Meetings Act",
+    "last_updated": "2025-01-15"
+  },
+  {
+    "slug": "alaska",
+    "state": "Alaska",
+    "abbreviation": "AK",
+    "foia_law": "Alaska Public Records Act",
+    "open_meetings_law": "Alaska Open Meetings Act",
+    "last_updated": "2025-01-15"
+  },
+  {
+    "slug": "arizona",
+    "state": "Arizona",
+    "abbreviation": "AZ",
+    "foia_law": "Arizona Public Records Law",
+    "open_meetings_law": "Arizona Open Meeting Law",
+    "last_updated": "2025-01-15"
+  },
+  {
+    "slug": "arkansas",
+    "state": "Arkansas",
+    "abbreviation": "AR",
+    "foia_law": "Arkansas Freedom of Information Act",
+    "open_meetings_law": "Arkansas Freedom of Information Act (meetings)",
+    "last_updated": "2025-01-15"
+  },
+  {
+    "slug": "california",
+    "state": "California",
+    "abbreviation": "CA",
+    "foia_law": "California Public Records Act (CPRA)",
+    "open_meetings_law": "Ralph M. Brown Act",
+    "last_updated": "2025-01-15"
+  },
+  {
+    "slug": "colorado",
+    "state": "Colorado",
+    "abbreviation": "CO",
+    "foia_law": "Colorado Open Records Act (CORA)",
+    "open_meetings_law": "Colorado Open Meetings Law (Sunshine Law)",
+    "last_updated": "2025-01-15"
+  },
+  {
+    "slug": "connecticut",
+    "state": "Connecticut",
+    "abbreviation": "CT",
+    "foia_law": "Connecticut Freedom of Information Act",
+    "open_meetings_law": "Connecticut Freedom of Information Act (meetings)",
+    "last_updated": "2025-01-15"
+  },
+  {
+    "slug": "delaware",
+    "state": "Delaware",
+    "abbreviation": "DE",
+    "foia_law": "Delaware Freedom of Information Act",
+    "open_meetings_law": "Delaware Freedom of Information Act (meetings)",
+    "last_updated": "2025-01-15"
+  },
+  {
+    "slug": "district-of-columbia",
+    "state": "District of Columbia",
+    "abbreviation": "DC",
+    "foia_law": "DC Freedom of Information Act",
+    "open_meetings_law": "DC Open Meetings Act",
+    "last_updated": "2025-01-15"
+  },
+  {
+    "slug": "florida",
+    "state": "Florida",
+    "abbreviation": "FL",
+    "foia_law": "Florida Public Records Act",
+    "open_meetings_law": "Florida Sunshine Law",
+    "last_updated": "2025-01-15"
+  },
+  {
+    "slug": "georgia",
+    "state": "Georgia",
+    "abbreviation": "GA",
+    "foia_law": "Georgia Open Records Act",
+    "open_meetings_law": "Georgia Open Meetings Act",
+    "last_updated": "2025-01-15"
+  },
+  {
+    "slug": "hawaii",
+    "state": "Hawaii",
+    "abbreviation": "HI",
+    "foia_law": "Uniform Information Practices Act (UIPA)",
+    "open_meetings_law": "Hawaii Sunshine Law",
+    "last_updated": "2025-01-15"
+  },
+  {
+    "slug": "idaho",
+    "state": "Idaho",
+    "abbreviation": "ID",
+    "foia_law": "Idaho Public Records Act",
+    "open_meetings_law": "Idaho Open Meeting Law",
+    "last_updated": "2025-01-15"
+  },
+  {
+    "slug": "illinois",
+    "state": "Illinois",
+    "abbreviation": "IL",
+    "foia_law": "Illinois Freedom of Information Act",
+    "open_meetings_law": "Illinois Open Meetings Act",
+    "last_updated": "2025-01-15"
+  },
+  {
+    "slug": "indiana",
+    "state": "Indiana",
+    "abbreviation": "IN",
+    "foia_law": "Indiana Access to Public Records Act (APRA)",
+    "open_meetings_law": "Indiana Open Door Law",
+    "last_updated": "2025-01-15"
+  },
+  {
+    "slug": "iowa",
+    "state": "Iowa",
+    "abbreviation": "IA",
+    "foia_law": "Iowa Open Records Law",
+    "open_meetings_law": "Iowa Open Meetings Law",
+    "last_updated": "2025-01-15"
+  },
+  {
+    "slug": "kansas",
+    "state": "Kansas",
+    "abbreviation": "KS",
+    "foia_law": "Kansas Open Records Act (KORA)",
+    "open_meetings_law": "Kansas Open Meetings Act (KOMA)",
+    "last_updated": "2025-01-15"
+  },
+  {
+    "slug": "kentucky",
+    "state": "Kentucky",
+    "abbreviation": "KY",
+    "foia_law": "Kentucky Open Records Act",
+    "open_meetings_law": "Kentucky Open Meetings Act",
+    "last_updated": "2025-01-15"
+  },
+  {
+    "slug": "louisiana",
+    "state": "Louisiana",
+    "abbreviation": "LA",
+    "foia_law": "Louisiana Public Records Act",
+    "open_meetings_law": "Louisiana Open Meetings Law",
+    "last_updated": "2025-01-15"
+  },
+  {
+    "slug": "maine",
+    "state": "Maine",
+    "abbreviation": "ME",
+    "foia_law": "Maine Freedom of Access Act",
+    "open_meetings_law": "Maine Freedom of Access Act (meetings)",
+    "last_updated": "2025-01-15"
+  },
+  {
+    "slug": "maryland",
+    "state": "Maryland",
+    "abbreviation": "MD",
+    "foia_law": "Maryland Public Information Act (MPIA)",
+    "open_meetings_law": "Maryland Open Meetings Act",
+    "last_updated": "2025-01-15"
+  },
+  {
+    "slug": "massachusetts",
+    "state": "Massachusetts",
+    "abbreviation": "MA",
+    "foia_law": "Public Records Law",
+    "open_meetings_law": "Open Meeting Law",
+    "last_updated": "2025-01-15"
+  },
+  {
+    "slug": "michigan",
+    "state": "Michigan",
+    "abbreviation": "MI",
+    "foia_law": "Freedom of Information Act (FOIA)",
+    "open_meetings_law": "Open Meetings Act (OMA)",
+    "last_updated": "2025-01-15"
+  },
+  {
+    "slug": "minnesota",
+    "state": "Minnesota",
+    "abbreviation": "MN",
+    "foia_law": "Minnesota Government Data Practices Act (MGDPA)",
+    "open_meetings_law": "Minnesota Open Meeting Law",
+    "last_updated": "2025-01-15"
+  },
+  {
+    "slug": "mississippi",
+    "state": "Mississippi",
+    "abbreviation": "MS",
+    "foia_law": "Mississippi Public Records Act",
+    "open_meetings_law": "Mississippi Open Meetings Act",
+    "last_updated": "2025-01-15"
+  },
+  {
+    "slug": "missouri",
+    "state": "Missouri",
+    "abbreviation": "MO",
+    "foia_law": "Missouri Sunshine Law",
+    "open_meetings_law": "Missouri Sunshine Law (meetings)",
+    "last_updated": "2025-01-15"
+  },
+  {
+    "slug": "montana",
+    "state": "Montana",
+    "abbreviation": "MT",
+    "foia_law": "Montana Constitution Art. II, § 9; Right to Know",
+    "open_meetings_law": "Montana Open Meeting Law",
+    "last_updated": "2025-01-15"
+  },
+  {
+    "slug": "nebraska",
+    "state": "Nebraska",
+    "abbreviation": "NE",
+    "foia_law": "Nebraska Public Records Statutes",
+    "open_meetings_law": "Nebraska Open Meetings Act",
+    "last_updated": "2025-01-15"
+  },
+  {
+    "slug": "nevada",
+    "state": "Nevada",
+    "abbreviation": "NV",
+    "foia_law": "Nevada Public Records Act",
+    "open_meetings_law": "Nevada Open Meeting Law",
+    "last_updated": "2025-01-15"
+  },
+  {
+    "slug": "new-hampshire",
+    "state": "New Hampshire",
+    "abbreviation": "NH",
+    "foia_law": "New Hampshire Right-to-Know Law",
+    "open_meetings_law": "New Hampshire Right-to-Know Law (meetings)",
+    "last_updated": "2025-01-15"
+  },
+  {
+    "slug": "new-jersey",
+    "state": "New Jersey",
+    "abbreviation": "NJ",
+    "foia_law": "Open Public Records Act (OPRA)",
+    "open_meetings_law": "Open Public Meetings Act",
+    "last_updated": "2025-01-15"
+  },
+  {
+    "slug": "new-mexico",
+    "state": "New Mexico",
+    "abbreviation": "NM",
+    "foia_law": "New Mexico Inspection of Public Records Act (IPRA)",
+    "open_meetings_law": "New Mexico Open Meetings Act",
+    "last_updated": "2025-01-15"
+  },
+  {
+    "slug": "new-york",
+    "state": "New York",
+    "abbreviation": "NY",
+    "foia_law": "New York Freedom of Information Law (FOIL)",
+    "open_meetings_law": "New York Open Meetings Law",
+    "last_updated": "2025-01-15"
+  },
+  {
+    "slug": "north-carolina",
+    "state": "North Carolina",
+    "abbreviation": "NC",
+    "foia_law": "North Carolina Public Records Law",
+    "open_meetings_law": "North Carolina Open Meetings Law",
+    "last_updated": "2025-01-15"
+  },
+  {
+    "slug": "north-dakota",
+    "state": "North Dakota",
+    "abbreviation": "ND",
+    "foia_law": "North Dakota Open Records Law",
+    "open_meetings_law": "North Dakota Open Meetings Law",
+    "last_updated": "2025-01-15"
+  },
+  {
+    "slug": "ohio",
+    "state": "Ohio",
+    "abbreviation": "OH",
+    "foia_law": "Ohio Public Records Act",
+    "open_meetings_law": "Ohio Open Meetings Act (Sunshine Law)",
+    "last_updated": "2025-01-15"
+  },
+  {
+    "slug": "oklahoma",
+    "state": "Oklahoma",
+    "abbreviation": "OK",
+    "foia_law": "Oklahoma Open Records Act",
+    "open_meetings_law": "Oklahoma Open Meeting Act",
+    "last_updated": "2025-01-15"
+  },
+  {
+    "slug": "oregon",
+    "state": "Oregon",
+    "abbreviation": "OR",
+    "foia_law": "Oregon Public Records Law",
+    "open_meetings_law": "Oregon Public Meetings Law",
+    "last_updated": "2025-01-15"
+  },
+  {
+    "slug": "pennsylvania",
+    "state": "Pennsylvania",
+    "abbreviation": "PA",
+    "foia_law": "Pennsylvania Right-to-Know Law",
+    "open_meetings_law": "Pennsylvania Sunshine Act",
+    "last_updated": "2025-01-15"
+  },
+  {
+    "slug": "rhode-island",
+    "state": "Rhode Island",
+    "abbreviation": "RI",
+    "foia_law": "Rhode Island Access to Public Records Act (APRA)",
+    "open_meetings_law": "Rhode Island Open Meetings Act",
+    "last_updated": "2025-01-15"
+  },
+  {
+    "slug": "south-carolina",
+    "state": "South Carolina",
+    "abbreviation": "SC",
+    "foia_law": "South Carolina Freedom of Information Act",
+    "open_meetings_law": "South Carolina Freedom of Information Act (meetings)",
+    "last_updated": "2025-01-15"
+  },
+  {
+    "slug": "south-dakota",
+    "state": "South Dakota",
+    "abbreviation": "SD",
+    "foia_law": "South Dakota Open Records Law",
+    "open_meetings_law": "South Dakota Open Meetings Law",
+    "last_updated": "2025-01-15"
+  },
+  {
+    "slug": "tennessee",
+    "state": "Tennessee",
+    "abbreviation": "TN",
+    "foia_law": "Tennessee Public Records Act",
+    "open_meetings_law": "Tennessee Open Meetings Act (Sunshine Law)",
+    "last_updated": "2025-01-15"
+  },
+  {
+    "slug": "texas",
+    "state": "Texas",
+    "abbreviation": "TX",
+    "foia_law": "Texas Public Information Act (TPIA)",
+    "open_meetings_law": "Texas Open Meetings Act",
+    "last_updated": "2025-01-15"
+  },
+  {
+    "slug": "utah",
+    "state": "Utah",
+    "abbreviation": "UT",
+    "foia_law": "Government Records Access and Management Act (GRAMA)",
+    "open_meetings_law": "Utah Open and Public Meetings Act",
+    "last_updated": "2025-01-15"
+  },
+  {
+    "slug": "vermont",
+    "state": "Vermont",
+    "abbreviation": "VT",
+    "foia_law": "Vermont Public Records Act",
+    "open_meetings_law": "Vermont Open Meeting Law",
+    "last_updated": "2025-01-15"
+  },
+  {
+    "slug": "virginia",
+    "state": "Virginia",
+    "abbreviation": "VA",
+    "foia_law": "Virginia Freedom of Information Act (VFOIA)",
+    "open_meetings_law": "Virginia Freedom of Information Act (meetings)",
+    "last_updated": "2025-01-15"
+  },
+  {
+    "slug": "washington",
+    "state": "Washington",
+    "abbreviation": "WA",
+    "foia_law": "Washington Public Records Act (PRA)",
+    "open_meetings_law": "Washington Open Public Meetings Act",
+    "last_updated": "2025-01-15"
+  },
+  {
+    "slug": "west-virginia",
+    "state": "West Virginia",
+    "abbreviation": "WV",
+    "foia_law": "West Virginia Freedom of Information Act",
+    "open_meetings_law": "West Virginia Open Governmental Proceedings Act",
+    "last_updated": "2025-01-15"
+  },
+  {
+    "slug": "wisconsin",
+    "state": "Wisconsin",
+    "abbreviation": "WI",
+    "foia_law": "Wisconsin Open Records Law",
+    "open_meetings_law": "Wisconsin Open Meetings Law",
+    "last_updated": "2025-01-15"
+  },
+  {
+    "slug": "wyoming",
+    "state": "Wyoming",
+    "abbreviation": "WY",
+    "foia_law": "Wyoming Public Records Act",
+    "open_meetings_law": "Wyoming Public Meetings Act",
+    "last_updated": "2025-01-15"
+  }
+]
