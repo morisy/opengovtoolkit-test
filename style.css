@@ -602,7 +602,7 @@ blockquote {
   padding: 0 var(--spacing-md) var(--spacing-md);
 }
 
-/* Featured section (Right Now) */
+/* Featured section (first section on each state page) */
 .section-accordion--featured {
   border-color: var(--color-accent);
   border-left: 4px solid var(--color-accent);

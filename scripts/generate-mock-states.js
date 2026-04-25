@@ -177,7 +177,22 @@ const states = [
     fees: "Reasonable fees; first 2 hours of search and preparation free",
     enforce: "Circuit Court; Public Information Act Compliance Board"
   },
-  // Massachusetts and Michigan already exist — skip
+  {
+    state: "Massachusetts", abbr: "MA", slug: "massachusetts",
+    foia: "Public Records Law", foiaCite: "M.G.L. c. 66, § 10",
+    oml: "Open Meeting Law", omlCite: "M.G.L. c. 30A, §§ 18–25",
+    response: "10 business days (may extend 15 more with reason)",
+    fees: "Actual cost of reproduction; $25/hr after first 4 hours of search/segregation",
+    enforce: "Supervisor of Records (Secretary of State); Superior Court"
+  },
+  {
+    state: "Michigan", abbr: "MI", slug: "michigan",
+    foia: "Freedom of Information Act (FOIA)", foiaCite: "MCL 15.231–15.246",
+    oml: "Open Meetings Act (OMA)", omlCite: "MCL 15.261–15.275",
+    response: "5 business days (may extend 10 more)",
+    fees: "Labor + actual costs; first $20 fee waived for indigent requesters",
+    enforce: "Circuit Court"
+  },
   {
     state: "Minnesota", abbr: "MN", slug: "minnesota",
     foia: "Minnesota Government Data Practices Act (MGDPA)", foiaCite: "Minn. Stat. §§ 13.01–13.99",
@@ -405,6 +420,21 @@ const states = [
 ];
 
 function generateMd(s) {
+  const noStatutoryDeadline = /no (specific )?statutory deadline/i.test(s.response)
+    || /^reasonable time/i.test(s.response);
+  const responsePhrase = noStatutoryDeadline
+    ? 'a reasonable time — other states have firmer deadlines'
+    : s.response;
+  const sampleResponseClause = noStatutoryDeadline
+    ? 'which under ' + s.state + ' law is a reasonable time'
+    : 'which under ' + s.state + ' law is ' + s.response;
+  const trialCourt = s.enforce.includes('Court')
+    ? s.enforce.split(';').pop().trim()
+    : 'the appropriate trial court';
+  const firstAppealBody = s.enforce.includes(';')
+    ? s.enforce.split(';')[0].trim()
+    : 'the head of the agency';
+
   return `---
 state: "${s.state}"
 abbreviation: "${s.abbr}"
@@ -418,19 +448,21 @@ enforcement_body: "${s.enforce}"
 last_updated: "2025-01-15"
 ---
 
-## Right Now
+## Getting data, documents, contracts and other records
 
-**You have the right to request public records in ${s.state}.** Any person can submit a public records request to any public body in ${s.state}. You do not need to give a reason for your request.
+**You have the right to request public records in ${s.state}.** Any person can submit a public records request to a public body in ${s.state}. You do not need to give a reason for your request.
+
+*Some states limit who can request records to in-state residents or citizens — check ${s.state}'s rules before relying on this.*
 
 **Key points:**
 - Requests should be in writing (email is typically acceptable)
-- Agencies must respond within ${s.response.toLowerCase().includes('no') ? 'a reasonable time' : s.response.toLowerCase()}
-- If denied, the response must cite a specific exemption
-- You do not need to be a ${s.state} resident to make a request
+- Agencies must respond within ${responsePhrase}
+- If denied, the response must cite a specific exemption barring disclosure
+- In most states you do not need to be a resident or citizen to make a request, but some states limit access to residents
 
 **Sample request language you can copy:**
 
-> Pursuant to the ${s.foia}, ${s.foiaCite}, I am requesting copies of the following records: [describe records]. I request a fee waiver or reduction, as disclosure of this information is in the public interest. Please respond within the time period required by law. If any portion of this request is denied, please cite the specific exemption and release all reasonably segregable portions.
+> In accordance with the ${s.foia}, ${s.foiaCite}, I am requesting copies of the following records: [describe records]. I request a fee waiver or reduction, as disclosure of this information is in the public interest. Please respond within the time period required by law, ${sampleResponseClause}. If any portion of this request is denied, please cite the specific exemption and release all records that are not exempt from disclosure in the same batch.
 
 ## Records Laws
 
@@ -439,7 +471,7 @@ ${s.state}'s ${s.foia} provides public access to government records held by stat
 ### What you can request
 
 Public records generally include any document, file, or data created or maintained by a government agency. This includes:
-- Documents, emails, and text messages
+- Documents, emails, and text messages, including those on privately held devices (rules vary by state)
 - Databases and spreadsheets
 - Photographs, audio, and video recordings
 - Contracts, invoices, and financial records
@@ -450,37 +482,37 @@ Public records generally include any document, file, or data created or maintain
 Common exemptions under ${s.state} law include:
 - **Personal privacy** — records containing sensitive personal information (Social Security numbers, medical records)
 - **Law enforcement** — investigatory records that could interfere with active investigations
-- **Attorney-client privilege** — communications between government attorneys and their clients
+- **Attorney-client privilege** — communications between government attorneys and their clients, as well as communications between private attorneys hired by the government and their clients (who may be the government itself)
 - **Trade secrets** — confidential commercial or financial information
 - **Deliberative process** — internal pre-decisional communications in some cases
 
-The agency bears the burden of justifying any denial and must release reasonably segregable non-exempt portions.
+The agency bears the burden of justifying any denial and must release records that are not exempt from disclosure in the same batch.
 
 ### Fees
 
 Under ${s.state} law:
 - ${s.fees}
-- You can request a fee estimate before the agency begins processing
+- You can request a fee estimate before the agency begins processing your request
 - You can request a fee waiver if disclosure serves the public interest
-- Electronic records should generally be provided in the format requested
+- Electronic records should generally be provided in the format requested, such as a spreadsheet, searchable PDF, or similar format
 
 ### Appeals
 
 If your request is denied or you receive an inadequate response:
-1. You may appeal to ${s.enforce.includes(';') ? s.enforce.split(';')[0].trim() : 'the head of the agency'}
-2. ${s.enforce.includes('Court') ? 'You may file a lawsuit in ' + s.enforce.split(';').pop().trim() : 'You may seek judicial review'}
-3. If you prevail, you may be eligible to recover attorney fees and costs
+1. You may file an appeal to ${firstAppealBody} — ask what the process is
+2. You may file a lawsuit in ${trialCourt} (the trial-court name varies by state — for example, Circuit Court, Superior Court, or District Court)
+3. If you succeed and the government is held to have erred in withholding the records, you may be eligible to recover attorney fees and costs (this varies by state)
 
 ## Open Meetings
 
-${s.state}'s ${s.oml} requires that government bodies conduct their business openly.
+${s.state}'s ${s.oml} requires that government bodies conduct their business openly and that advance notice be given. *What counts as "advance" notice is defined differently from state to state.*
 
 ### What's covered
 
-A "meeting" generally occurs whenever a quorum of a public body gathers to discuss or act on public business. This includes:
+A "meeting" generally occurs whenever a quorum of a public body gathers to discuss or act on public business. A quorum is usually a simple majority — in a group of nine councilors, for instance, a quorum would be five. This includes:
 - Regular and special meetings
 - Committee and subcommittee meetings
-- Work sessions and retreats
+- Work sessions and retreats, including those held off the usual site
 - Electronic or telephonic meetings (with conditions)
 
 ### Closed session exceptions
@@ -497,16 +529,16 @@ Public bodies may meet in closed session only for limited purposes, typically in
 - You have the right to attend and observe all open meetings
 - You have the right to record meetings (audio and video)
 - Agencies must provide advance notice of meetings
-- Minutes or recordings must be made available to the public
-- Many bodies provide a public comment period
+- Minutes or recordings must be made available to the public quickly
+- Many bodies provide a public comment period during their meetings
 
 ### Enforcement
 
 Violations of ${s.state}'s open meetings law can result in:
-- Invalidation of actions taken in improper closed sessions
-- Civil fines or penalties against individual members
-- Injunctive relief ordering future compliance
-- Attorney fees for successful plaintiffs
+- Invalidation of actions taken in improperly closed sessions
+- Civil fines or penalties against individual members of a board, commission, council, or similar body
+- Injunctive relief ordering future compliance by the body
+- Attorney fees for successful plaintiffs who were wrongly barred from a meeting or whose information was withheld during one
 
 ## Tips and Resources
 
@@ -516,7 +548,7 @@ Violations of ${s.state}'s open meetings law can result in:
 2. **Ask for electronic copies** — they're usually cheaper and faster to produce
 3. **Request a fee estimate** — ask for a detailed cost breakdown before the agency begins processing
 4. **Keep records** — save copies of your request, all correspondence, and any fee receipts
-5. **Know the appeals process** — if your request is denied, you have the right to appeal to ${s.enforce.includes(';') ? s.enforce.split(';')[0].trim() : 'the courts'}
+5. **Know the appeals process** — if your request is denied, you have the right to appeal to ${firstAppealBody}
 
 ### Key contacts
 
@@ -531,16 +563,19 @@ Violations of ${s.state}'s open meetings law can result in:
 `;
 }
 
+const force = process.argv.includes('--force');
 let created = 0;
+let updated = 0;
 let skipped = 0;
 for (const s of states) {
   const filePath = path.join(statesDir, s.slug + '.md');
-  if (fs.existsSync(filePath)) {
+  const existed = fs.existsSync(filePath);
+  if (existed && !force) {
     skipped++;
     continue;
   }
   fs.writeFileSync(filePath, generateMd(s));
-  created++;
+  if (existed) updated++; else created++;
 }
 
-console.log(`Created ${created} state file(s), skipped ${skipped} existing file(s).`);
+console.log(`Created ${created}, updated ${updated}, skipped ${skipped} state file(s).`);

@@ -1,6 +1,6 @@
 ---
-state: Massachusetts
-abbreviation: MA
+state: "Massachusetts"
+abbreviation: "MA"
 foia_law: "Public Records Law"
 foia_citation: "M.G.L. c. 66, § 10"
 open_meetings_law: "Open Meeting Law"
@@ -11,117 +11,115 @@ enforcement_body: "Supervisor of Records (Secretary of State); Superior Court"
 last_updated: "2025-01-15"
 ---
 
-## Right Now
+## Getting data, documents, contracts and other records
 
-**You have the right to request public records in Massachusetts.** Any person can submit a public records request to any government entity in Massachusetts. You do not need to be a resident, and you do not need to give a reason for your request.
+**You have the right to request public records in Massachusetts.** Any person can submit a public records request to a public body in Massachusetts. You do not need to give a reason for your request.
+
+*Some states limit who can request records to in-state residents or citizens — check Massachusetts's rules before relying on this.*
 
 **Key points:**
-- Requests must be in writing (email is acceptable)
-- Agencies must respond within 10 business days
-- Extensions of up to 15 additional business days require written justification
-- If denied, the response must explain which exemption applies
+- Requests should be in writing (email is typically acceptable)
+- Agencies must respond within 10 business days (may extend 15 more with reason)
+- If denied, the response must cite a specific exemption barring disclosure
+- In most states you do not need to be a resident or citizen to make a request, but some states limit access to residents
 
 **Sample request language you can copy:**
 
-> Pursuant to the Massachusetts Public Records Law, M.G.L. c. 66, § 10, I am requesting the following records: [describe records]. I request a fee waiver as the disclosure of this information is in the public interest. If any records are withheld, please specify the exemption relied upon and provide all reasonably segregable portions. Please respond within the time period required by law.
+> In accordance with the Public Records Law, M.G.L. c. 66, § 10, I am requesting copies of the following records: [describe records]. I request a fee waiver or reduction, as disclosure of this information is in the public interest. Please respond within the time period required by law, which under Massachusetts law is 10 business days (may extend 15 more with reason). If any portion of this request is denied, please cite the specific exemption and release all records that are not exempt from disclosure in the same batch.
 
 ## Records Laws
 
-Massachusetts' Public Records Law applies to all records made or received by any **officer or employee of any agency, executive office, department, board, commission, bureau, division, or authority of the Commonwealth**, as well as municipalities.
+Massachusetts's Public Records Law provides public access to government records held by state and local agencies.
 
 ### What you can request
 
-"Public records" include all documentary materials, regardless of form, made or received by government entities. This includes:
-- Documents, reports, and correspondence
-- Emails and electronic communications
-- Data, databases, and spreadsheets
-- Photographs, audio recordings, and video
-- Contracts and financial records
+Public records generally include any document, file, or data created or maintained by a government agency. This includes:
+- Documents, emails, and text messages, including those on privately held devices (rules vary by state)
+- Databases and spreadsheets
+- Photographs, audio, and video recordings
+- Contracts, invoices, and financial records
+- Meeting minutes and agendas
 
 ### Key exemptions
 
-Massachusetts has over 20 exemptions (M.G.L. c. 4, § 7(26)), including:
-- **Personal privacy** — records whose disclosure would constitute an unwarranted invasion of personal privacy
-- **Law enforcement** — investigatory materials that could prejudice enforcement proceedings
-- **Attorney-client privilege** and work product
-- **Trade secrets** and confidential commercial information
-- **Deliberative process** — inter-agency or intra-agency materials used in the deliberative process
+Common exemptions under Massachusetts law include:
+- **Personal privacy** — records containing sensitive personal information (Social Security numbers, medical records)
+- **Law enforcement** — investigatory records that could interfere with active investigations
+- **Attorney-client privilege** — communications between government attorneys and their clients, as well as communications between private attorneys hired by the government and their clients (who may be the government itself)
+- **Trade secrets** — confidential commercial or financial information
+- **Deliberative process** — internal pre-decisional communications in some cases
 
-The records custodian must demonstrate the applicability of any exemption and must segregate and provide non-exempt portions.
+The agency bears the burden of justifying any denial and must release records that are not exempt from disclosure in the same batch.
 
 ### Fees
 
-As of the 2016 public records reform law:
-- First 4 hours of employee time for search/segregation are free
-- After 4 hours: maximum $25/hour
-- Copies: $0.05/page (black and white)
-- Electronic records should be provided at no cost or minimal cost
-
-Agencies must provide a detailed, itemized fee estimate. You can petition the Supervisor of Records if fees seem unreasonable.
+Under Massachusetts law:
+- Actual cost of reproduction; $25/hr after first 4 hours of search/segregation
+- You can request a fee estimate before the agency begins processing your request
+- You can request a fee waiver if disclosure serves the public interest
+- Electronic records should generally be provided in the format requested, such as a spreadsheet, searchable PDF, or similar format
 
 ### Appeals
 
 If your request is denied or you receive an inadequate response:
-1. **Appeal to the Supervisor of Records** (Secretary of the Commonwealth's office) — they can order production and set a compliance deadline
-2. **File an action in Superior Court** if the Supervisor's determination is not followed
-3. Attorney fees and costs may be awarded if you prevail in court
+1. You may file an appeal to Supervisor of Records (Secretary of State) — ask what the process is
+2. You may file a lawsuit in Superior Court (the trial-court name varies by state — for example, Circuit Court, Superior Court, or District Court)
+3. If you succeed and the government is held to have erred in withholding the records, you may be eligible to recover attorney fees and costs (this varies by state)
 
 ## Open Meetings
 
-Massachusetts' Open Meeting Law (OML) requires that all deliberations and actions of public bodies take place in open, noticed meetings.
+Massachusetts's Open Meeting Law requires that government bodies conduct their business openly and that advance notice be given. *What counts as "advance" notice is defined differently from state to state.*
 
 ### What's covered
 
-A "meeting" is any deliberation by a public body with a quorum present. This includes:
-- All regular and special meetings
+A "meeting" generally occurs whenever a quorum of a public body gathers to discuss or act on public business. A quorum is usually a simple majority — in a group of nine councilors, for instance, a quorum would be five. This includes:
+- Regular and special meetings
 - Committee and subcommittee meetings
-- Remote/virtual meetings (permitted with specific requirements)
+- Work sessions and retreats, including those held off the usual site
+- Electronic or telephonic meetings (with conditions)
 
-### Executive session exceptions
+### Closed session exceptions
 
-Public bodies may go into executive session only for:
-- Discussing strategy regarding litigation (if an open meeting would be detrimental)
-- Discussing strategy for collective bargaining
-- Reviewing character or professional competence of an individual (unless they request an open hearing)
-- Considering purchase, exchange, lease, or value of real property (if open discussion would be detrimental)
-- Investigating criminal misconduct charges
-- Security-related matters
-
-A roll-call vote and stated purpose are required to enter executive session.
+Public bodies may meet in closed session only for limited purposes, typically including:
+- Personnel matters (hiring, firing, discipline)
+- Pending or threatened litigation
+- Real estate negotiations
+- Labor negotiations or collective bargaining strategy
+- Security-related discussions
 
 ### Your rights at meetings
 
-- You have the right to attend and observe
-- You can record the meeting (must notify the chair)
-- Notices must be posted at least 48 hours in advance (excluding weekends and holidays)
-- Minutes must be created and approved in a timely manner
-- Remote participation may be available
+- You have the right to attend and observe all open meetings
+- You have the right to record meetings (audio and video)
+- Agencies must provide advance notice of meetings
+- Minutes or recordings must be made available to the public quickly
+- Many bodies provide a public comment period during their meetings
 
 ### Enforcement
 
-The Attorney General's Division of Open Government enforces the Open Meeting Law:
-- Complaints can be filed with the AG within 30 days of the alleged violation
-- The AG can order remedial action and impose fines
-- Civil fines: up to $1,000 per violation for intentional violations
+Violations of Massachusetts's open meetings law can result in:
+- Invalidation of actions taken in improperly closed sessions
+- Civil fines or penalties against individual members of a board, commission, council, or similar body
+- Injunctive relief ordering future compliance by the body
+- Attorney fees for successful plaintiffs who were wrongly barred from a meeting or whose information was withheld during one
 
 ## Tips and Resources
 
 ### Practical tips for Massachusetts public records requests
 
-1. **Use the MuckRock platform or email** — written requests via email create a clear paper trail
-2. **Cite the 2016 reform law** — it strengthened requester rights and set clearer fee limits
-3. **Request a fee waiver** — agencies can waive fees if disclosure serves the public interest
-4. **Appeal early** — the Supervisor of Records process is free and often effective
-5. **Be specific but not too narrow** — describe what you want clearly, but leave room for related records
+1. **Be specific** — clearly describe the records you want, including date ranges, departments, and key terms
+2. **Ask for electronic copies** — they're usually cheaper and faster to produce
+3. **Request a fee estimate** — ask for a detailed cost breakdown before the agency begins processing
+4. **Keep records** — save copies of your request, all correspondence, and any fee receipts
+5. **Know the appeals process** — if your request is denied, you have the right to appeal to Supervisor of Records (Secretary of State)
 
 ### Key contacts
 
-- **Supervisor of Records** (Secretary of the Commonwealth) — handles public records appeals
-- **Attorney General's Division of Open Government** — enforces the Open Meeting Law
-- **New England First Amendment Coalition (NEFAC)** — advocacy and legal support
+- **Massachusetts Attorney General's Office** — may provide guidance on public records compliance
+- **Massachusetts Press Association** — may offer FOI resources and support for journalists
+- **Reporters Committee for Freedom of the Press** — free legal support and resources at rcfp.org
 
 ### Useful links
 
-- [Massachusetts Public Records Law (full text)](https://malegislature.gov/Laws/GeneralLaws/PartI/TitleX/Chapter66/Section10)
-- [Secretary of the Commonwealth — Public Records Division](https://www.sec.state.ma.us/divisions/public-records/public-records.htm)
-- [Attorney General — Open Meeting Law](https://www.mass.gov/the-open-meeting-law)
+- [Reporters Committee FOI guide for Massachusetts](https://www.rcfp.org/open-government-guide/massachusetts/)
+- [National Freedom of Information Coalition](https://www.nfoic.org/)
