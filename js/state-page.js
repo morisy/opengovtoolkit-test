@@ -110,8 +110,7 @@ const StatePage = (() => {
       sections.forEach((section, i) => {
         const sectionHtml = marked.parse(section.lines.join('\n'));
         const isFirst = i === 0;
-        const isFeatured = section.title.toLowerCase().includes('right now');
-        const featuredClass = isFeatured ? ' section-accordion--featured' : '';
+        const featuredClass = isFirst ? ' section-accordion--featured' : '';
         html += `
           <details class="section-accordion${featuredClass}" ${isFirst ? 'open' : ''}>
             <summary>${escapeHtml(section.title)}</summary>

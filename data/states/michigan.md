@@ -1,6 +1,6 @@
 ---
-state: Michigan
-abbreviation: MI
+state: "Michigan"
+abbreviation: "MI"
 foia_law: "Freedom of Information Act (FOIA)"
 foia_citation: "MCL 15.231–15.246"
 open_meetings_law: "Open Meetings Act (OMA)"
@@ -11,110 +11,115 @@ enforcement_body: "Circuit Court"
 last_updated: "2025-01-15"
 ---
 
-## Right Now
+## Getting data, documents, contracts and other records
 
-**You have the right to request public records in Michigan.** Any person — not just residents — can submit a Freedom of Information Act (FOIA) request to any public body in Michigan. You do not need to give a reason for your request.
+**You have the right to request public records in Michigan.** Any person can submit a public records request to a public body in Michigan. You do not need to give a reason for your request.
+
+*Some states limit who can request records to in-state residents or citizens — check Michigan's rules before relying on this.*
 
 **Key points:**
-- Requests should be in writing, but there is no required form
-- Agencies must respond within 5 business days
-- They can extend by up to 10 additional business days with written notice
-- If denied, the response must cite a specific exemption
+- Requests should be in writing (email is typically acceptable)
+- Agencies must respond within 5 business days (may extend 10 more)
+- If denied, the response must cite a specific exemption barring disclosure
+- In most states you do not need to be a resident or citizen to make a request, but some states limit access to residents
 
 **Sample request language you can copy:**
 
-> Pursuant to the Michigan Freedom of Information Act, MCL 15.231 et seq., I am requesting copies of the following records: [describe records]. I request a fee waiver or reduction, as disclosure of this information is in the public interest. Please respond within the time period required by law. If any portion of this request is denied, please cite the specific exemption and release all reasonably segregable portions.
+> In accordance with the Freedom of Information Act (FOIA), MCL 15.231–15.246, I am requesting copies of the following records: [describe records]. I request a fee waiver or reduction, as disclosure of this information is in the public interest. Please respond within the time period required by law, which under Michigan law is 5 business days (may extend 10 more). If any portion of this request is denied, please cite the specific exemption and release all records that are not exempt from disclosure in the same batch.
 
 ## Records Laws
 
-Michigan's Freedom of Information Act (FOIA) applies to all **public bodies**, including state agencies, counties, cities, townships, school districts, and public universities.
+Michigan's Freedom of Information Act (FOIA) provides public access to government records held by state and local agencies.
 
 ### What you can request
 
-All "public records" — writings prepared, owned, used, possessed, or retained by a public body in the performance of an official function. This includes:
-- Documents, emails, and text messages
+Public records generally include any document, file, or data created or maintained by a government agency. This includes:
+- Documents, emails, and text messages, including those on privately held devices (rules vary by state)
 - Databases and spreadsheets
-- Photographs and video recordings
-- Contracts and financial records
+- Photographs, audio, and video recordings
+- Contracts, invoices, and financial records
+- Meeting minutes and agendas
 
 ### Key exemptions
 
-Michigan FOIA has 13 categories of exemptions (MCL 15.243), including:
-- **Law enforcement records** that would interfere with an investigation
-- **Personal privacy** information (Social Security numbers, medical records)
-- **Attorney-client privileged** communications
-- **Trade secrets** and commercial/financial information
+Common exemptions under Michigan law include:
+- **Personal privacy** — records containing sensitive personal information (Social Security numbers, medical records)
+- **Law enforcement** — investigatory records that could interfere with active investigations
+- **Attorney-client privilege** — communications between government attorneys and their clients, as well as communications between private attorneys hired by the government and their clients (who may be the government itself)
+- **Trade secrets** — confidential commercial or financial information
+- **Deliberative process** — internal pre-decisional communications in some cases
 
-The public body bears the burden of proving an exemption applies and must release any reasonably segregable non-exempt portions.
+The agency bears the burden of justifying any denial and must release records that are not exempt from disclosure in the same batch.
 
 ### Fees
 
-Agencies can charge for:
-- Labor costs for searching, examining, and separating exempt material (first hour free if the public body has no FOIA procedures posted online)
-- Actual cost of copying (typically $0.10/page for paper)
-- Mailing costs
-
-The first $20 in fees must be waived for individuals who can demonstrate indigency. You can request a fee waiver or reduction if disclosure serves the public interest.
+Under Michigan law:
+- Labor + actual costs; first $20 fee waived for indigent requesters
+- You can request a fee estimate before the agency begins processing your request
+- You can request a fee waiver if disclosure serves the public interest
+- Electronic records should generally be provided in the format requested, such as a spreadsheet, searchable PDF, or similar format
 
 ### Appeals
 
-If your request is denied, you may:
-1. Appeal to the head of the public body within 180 days
-2. File a civil action in Circuit Court
-3. If you prevail in court, you may recover attorney fees and costs
+If your request is denied or you receive an inadequate response:
+1. You may file an appeal to the head of the agency — ask what the process is
+2. You may file a lawsuit in Circuit Court (the trial-court name varies by state — for example, Circuit Court, Superior Court, or District Court)
+3. If you succeed and the government is held to have erred in withholding the records, you may be eligible to recover attorney fees and costs (this varies by state)
 
 ## Open Meetings
 
-Michigan's Open Meetings Act (OMA) requires that all meetings of public bodies be open to the public.
+Michigan's Open Meetings Act (OMA) requires that government bodies conduct their business openly and that advance notice be given. *What counts as "advance" notice is defined differently from state to state.*
 
 ### What's covered
 
-A "meeting" occurs whenever a quorum of a public body gathers for deliberation or decision-making. This includes:
+A "meeting" generally occurs whenever a quorum of a public body gathers to discuss or act on public business. A quorum is usually a simple majority — in a group of nine councilors, for instance, a quorum would be five. This includes:
 - Regular and special meetings
-- Committee meetings
-- Work sessions and retreats
+- Committee and subcommittee meetings
+- Work sessions and retreats, including those held off the usual site
+- Electronic or telephonic meetings (with conditions)
 
 ### Closed session exceptions
 
-A public body may meet in closed session only for:
-- Reviewing an application for employment or appointment (by request of the applicant)
-- Consulting with the attorney regarding pending litigation
-- Discussing purchase or lease of real property
-- Labor negotiations strategy sessions
-- Reviewing and considering security plans
+Public bodies may meet in closed session only for limited purposes, typically including:
+- Personnel matters (hiring, firing, discipline)
+- Pending or threatened litigation
+- Real estate negotiations
+- Labor negotiations or collective bargaining strategy
+- Security-related discussions
 
 ### Your rights at meetings
 
-- You have the right to attend and observe
-- You have the right to record the meeting (audio and video)
-- Meeting notices must be posted at least 18 hours in advance
-- Minutes must be available within 8 business days after the meeting
-- You can request to address the public body during the public comment period
+- You have the right to attend and observe all open meetings
+- You have the right to record meetings (audio and video)
+- Agencies must provide advance notice of meetings
+- Minutes or recordings must be made available to the public quickly
+- Many bodies provide a public comment period during their meetings
 
 ### Enforcement
 
-Violations of the OMA can result in:
-- Invalidation of decisions made in violation of the act
-- Civil fines of up to $1,000 for a first offense, $2,000 for subsequent offenses
-- Court-ordered injunctive relief
+Violations of Michigan's open meetings law can result in:
+- Invalidation of actions taken in improperly closed sessions
+- Civil fines or penalties against individual members of a board, commission, council, or similar body
+- Injunctive relief ordering future compliance by the body
+- Attorney fees for successful plaintiffs who were wrongly barred from a meeting or whose information was withheld during one
 
 ## Tips and Resources
 
-### Practical tips for Michigan FOIA requests
+### Practical tips for Michigan public records requests
 
-1. **Be specific** — clearly describe the records you want, including date ranges and departments
-2. **Ask for electronic copies** — they're usually cheaper and faster
-3. **Request a fee estimate first** — ask agencies to provide a detailed fee estimate before proceeding
-4. **Keep copies of everything** — save your request, any responses, and fee receipts
-5. **Use the deposit strategically** — agencies requiring deposits over $50 must provide a detailed itemization
+1. **Be specific** — clearly describe the records you want, including date ranges, departments, and key terms
+2. **Ask for electronic copies** — they're usually cheaper and faster to produce
+3. **Request a fee estimate** — ask for a detailed cost breakdown before the agency begins processing
+4. **Keep records** — save copies of your request, all correspondence, and any fee receipts
+5. **Know the appeals process** — if your request is denied, you have the right to appeal to the head of the agency
 
 ### Key contacts
 
-- **Michigan Department of Attorney General** — can provide guidance on FOIA compliance
-- **Michigan Press Association** — offers a FOIA hotline for journalists
-- **Reporters Committee for Freedom of the Press** — free legal support for journalists
+- **Michigan Attorney General's Office** — may provide guidance on public records compliance
+- **Michigan Press Association** — may offer FOI resources and support for journalists
+- **Reporters Committee for Freedom of the Press** — free legal support and resources at rcfp.org
 
 ### Useful links
 
-- [Michigan FOIA statute (full text)](http://www.legislature.mi.gov/\(S\(v1qnzqz2f2bh2x55b0zxaj55\)\)/mileg.aspx?page=getObject&objectName=mcl-Act-442-of-1976)
-- [Michigan Open Meetings Act (full text)](http://www.legislature.mi.gov/\(S\(v1qnzqz2f2bh2x55b0zxaj55\)\)/mileg.aspx?page=getObject&objectName=mcl-Act-267-of-1976)
+- [Reporters Committee FOI guide for Michigan](https://www.rcfp.org/open-government-guide/michigan/)
+- [National Freedom of Information Coalition](https://www.nfoic.org/)
