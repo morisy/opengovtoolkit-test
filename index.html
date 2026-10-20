@@ -1,61 +1,577 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Open Government Toolkit</title>
-  <meta name="description" content="Quick, plain-language guidance on open records and open meetings rights by state.">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <a href="#main" class="skip-link">Skip to main content</a>
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Requester Toolkit Widget</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: a single embeddable card (max 680px) shown on a neutral host page.
+   Intro sits on top, a tab strip below it, one panel visible at a time. */
+:root {
+  --bg: #f7f8fa;
+  --card: #ffffff;
+  --card-alt: #f0f3f7;
+  --fg: #333c47;
+  --head: #0c1e27;
+  --muted: #5d6977;
+  --line: #d3d9e0;
+  --line-strong: #97a1ad;
+  --accent: #3069ae;
+  --accent-ink: #f7f8fa;
+  --accent-soft: #e4edf8;
+  --btn: #4582cc;
+  --btn-edge: #3069ae;
+  --btn-ink: #f7f8fa;
+  --coral: #cc5c52;
+  --mark: #f8dcd8;
+  --ok: #1d6b3a;
+  --font-display: "Source Sans 3", "Source Sans Pro", -apple-system, "system-ui", "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  color-scheme: light;
+  --font-body: "Source Sans 3", "Source Sans Pro", -apple-system, "system-ui", "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+}
 
-  <div class="prototype-banner" role="status">
-    <span><strong>Prototype:</strong> the content on this site is placeholder text and is mostly inaccurate. Do not rely on it.</span>
-    <button class="prototype-banner__more" type="button" aria-haspopup="dialog" aria-controls="prototype-modal">Details</button>
+* { box-sizing: border-box; }
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+  padding-block: 16px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.host-note {
+  max-width: 680px;
+  margin: 0 auto 12px;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ---------- widget ---------- */
+.rt-widget {
+  width: 100%;
+  margin: 0;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--coral);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.rt-head { padding: 22px 24px 18px; }
+.rt-kicker {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 6px;
+}
+.rt-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 1.15;
+  color: var(--head);
+  margin: 0 0 10px;
+  text-wrap: balance;
+}
+.rt-intro { margin: 0; color: var(--fg); max-width: 60ch; }
+.rt-intro strong { font-weight: 600; }
+
+.rt-tabs {
+  display: flex;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: var(--card-alt);
+  overflow-x: auto;
+}
+.rt-tab {
+  flex: 1 1 auto;
+  appearance: none;
+  background: transparent;
+  border: 0;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -1px;
+  padding: 12px 14px;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--muted);
+  white-space: nowrap;
+  cursor: pointer;
+}
+.rt-tab:hover { color: var(--fg); }
+.rt-tab[aria-selected="true"] {
+  color: var(--accent);
+  background: var(--card);
+  border-bottom-color: var(--accent);
+}
+.rt-tab:focus-visible, .rt-widget a:focus-visible, .rt-widget button:focus-visible,
+.rt-widget input:focus-visible, .rt-widget textarea:focus-visible, .rt-widget summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.rt-panel { padding: 22px 24px 24px; }
+.rt-panel h3 {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--head);
+  margin: 0 0 6px;
+}
+.rt-lede { margin: 0 0 16px; color: var(--muted); }
+
+/* request ideas */
+.rt-ideas { list-style: none; margin: 0 0 16px; padding: 0; display: grid; gap: 10px; }
+.rt-idea a {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 4px 12px;
+  align-items: center;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  color: inherit;
+  text-decoration: none;
+  background: var(--card);
+}
+.rt-idea a:hover { border-color: var(--accent); background: var(--accent-soft); }
+.rt-idea-name { font-weight: 600; }
+.rt-idea-desc { grid-column: 1; font-size: 13px; color: var(--muted); }
+.rt-idea-count {
+  grid-column: 2; grid-row: 1 / span 2;
+  font-size: 12px; color: var(--accent); font-weight: 600; white-space: nowrap;
+}
+.rt-more {
+  display: inline-block;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+}
+.rt-more:hover { opacity: 0.8; }
+
+/* faq */
+.rt-faq { margin: 0 0 22px; border-top: 1px solid var(--line); }
+.rt-faq-item { border-bottom: 1px solid var(--line); }
+.rt-faq-q {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  text-align: left;
+  background: transparent;
+  border: 0;
+  padding: 13px 2px;
+  font: inherit;
+  font-weight: 600;
+  color: var(--fg);
+  cursor: pointer;
+}
+.rt-faq-q:hover { color: var(--accent); }
+.rt-faq-q .rt-via { display: block; font-size: 12px; font-weight: 400; color: var(--muted); margin-top: 1px; }
+.rt-chev { flex: none; margin-top: 6px; width: 8px; height: 8px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(45deg); transition: transform 0.15s ease; }
+.rt-faq-q[aria-expanded="true"] .rt-chev { transform: rotate(-135deg); margin-top: 9px; }
+.rt-faq-a { padding: 0 2px 14px; max-width: 60ch; }
+.rt-faq-a p { margin: 0 0 8px; }
+.rt-src { font-size: 13px; }
+.rt-src a, .rt-result-src a { color: var(--accent); font-weight: 600; }
+
+/* ask */
+.rt-ask { padding-top: 4px; }
+.rt-ask h4 { margin: 0 0 4px; font-size: 15px; }
+.rt-ask-form { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+.rt-ask-form input[type="search"] { flex: 1 1 220px; min-width: 0; }
+.rt-input {
+  font: inherit;
+  color: var(--fg);
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 9px 11px;
+  width: 100%;
+}
+textarea.rt-input { min-height: 90px; resize: vertical; }
+.rt-btn {
+  font: inherit;
+  font-weight: 500;
+  background: var(--btn);
+  color: var(--btn-ink);
+  border: 1px solid var(--btn-edge);
+  border-radius: 4px;
+  padding: 9px 16px;
+  cursor: pointer;
+}
+.rt-btn:hover { filter: brightness(1.08); }
+.rt-chips { display: flex; gap: 6px; flex-wrap: wrap; margin: 10px 0 0; padding: 0; list-style: none; }
+.rt-chip {
+  font: inherit; font-size: 12px; color: var(--muted);
+  background: var(--card-alt); border: 1px solid var(--line);
+  border-radius: 999px; padding: 3px 10px; cursor: pointer;
+}
+.rt-chip:hover { color: var(--accent); border-color: var(--accent); }
+.rt-results { margin-top: 14px; display: grid; gap: 10px; }
+.rt-results-meta { font-size: 13px; color: var(--muted); margin: 0; }
+.rt-result {
+  margin: 0;
+  padding: 12px 14px;
+  background: var(--card-alt);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+}
+.rt-result blockquote { margin: 0 0 8px; padding: 0; font-family: var(--font-display); font-size: 16px; line-height: 1.45; }
+.rt-result mark { background: var(--mark); color: inherit; border-radius: 2px; padding: 0 1px; }
+.rt-result-src { font-size: 13px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: baseline; }
+.rt-badge {
+  font-size: 11px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase;
+  color: var(--accent); background: var(--accent-soft); border-radius: 4px; padding: 1px 6px;
+}
+
+/* help */
+.rt-help-list { margin: 0 0 20px; padding: 0; list-style: none; display: grid; gap: 8px; }
+.rt-help-list li {
+  display: flex; gap: 10px; align-items: baseline;
+  padding: 10px 12px; border: 1px solid var(--line); border-radius: 4px;
+}
+.rt-help-list a { color: var(--accent); font-weight: 600; }
+.rt-help-list span { color: var(--muted); font-size: 13px; }
+.rt-form { display: grid; gap: 12px; padding-top: 16px; border-top: 1px solid var(--line); }
+.rt-form label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 4px; }
+.rt-form-note { font-size: 13px; color: var(--muted); margin: 0; }
+.rt-form-note details { display: inline; }
+.rt-form-note summary { display: inline; cursor: pointer; color: var(--accent); font-weight: 600; }
+.rt-form-note details[open] { display: block; margin-top: 6px; }
+.rt-status {
+  margin: 0; padding: 10px 12px; border-radius: 4px;
+  background: var(--accent-soft); color: var(--fg); font-size: 14px;
+}
+
+/* stats */
+.rt-stats { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.rt-stat { padding: 14px 16px; border: 1px solid var(--line); border-radius: 4px; background: var(--card); }
+.rt-stat-num {
+  font-family: var(--font-display);
+  font-size: 34px; font-weight: 600; line-height: 1;
+  color: var(--head);
+  font-variant-numeric: tabular-nums;
+}
+.rt-stat-num small { font-family: var(--font-body); font-size: 14px; font-weight: 600; color: var(--muted); margin-left: 4px; }
+.rt-stat-label { margin: 8px 0 0; font-size: 14px; }
+.rt-meter { height: 6px; border-radius: 3px; background: var(--accent-soft); margin-top: 10px; overflow: hidden; }
+.rt-meter > i { display: block; height: 100%; background: var(--btn); }
+.rt-stat-foot { margin: 14px 0 0; font-size: 12px; color: var(--muted); }
+
+.rt-foot {
+  padding: 12px 24px;
+  border-top: 1px solid var(--line);
+  background: var(--card-alt);
+  font-size: 12px;
+  color: var(--muted);
+  display: flex; justify-content: space-between; gap: 8px 16px; flex-wrap: wrap;
+}
+.rt-foot a { color: inherit; }
+
+@media (max-width: 520px) {
+  .rt-head, .rt-panel, .rt-foot { padding-left: 16px; padding-right: 16px; }
+  .rt-stats { grid-template-columns: 1fr; }
+  .rt-title { font-size: 23px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .rt-chev { transition: none; }
+}
+</style>
+
+<section class="rt-widget" aria-labelledby="rt-title">
+  <header class="rt-head">
+    <p class="rt-kicker">Requester Toolkit</p>
+    <h2 class="rt-title" id="rt-title">Public records in Iowa</h2>
+    <p class="rt-intro">Want to learn more about Iowa’s public records laws? Search across trusted resources or get inspiration from other requesters by sharing what you’re working on here.</p>
+  </header>
+
+  <div class="rt-tabs" role="tablist" aria-label="Requester toolkit sections">
+    <button class="rt-tab" role="tab" id="tab-ideas" aria-controls="panel-ideas" aria-selected="true">Request ideas</button>
+    <button class="rt-tab" role="tab" id="tab-faq" aria-controls="panel-faq" aria-selected="false" tabindex="-1">Frequent questions</button>
+    <button class="rt-tab" role="tab" id="tab-help" aria-controls="panel-help" aria-selected="false" tabindex="-1">Get help</button>
+    <button class="rt-tab" role="tab" id="tab-stats" aria-controls="panel-stats" aria-selected="false" tabindex="-1">Fast Stats</button>
   </div>
 
-  <div class="prototype-modal" id="prototype-modal" role="dialog" aria-modal="true" aria-labelledby="prototype-modal-title" hidden>
-    <div class="prototype-modal__backdrop" data-close></div>
-    <div class="prototype-modal__panel" role="document">
-      <h2 id="prototype-modal-title">The content here is inaccurate placeholder text</h2>
-      <p>This site is a UX prototype. The state-by-state guidance, response deadlines, fees, citations, exemption lists, sample request language, and contacts are <strong>placeholder text</strong>. None of it has been verified, and much of it is wrong or out of date.</p>
-      <p>Don't use this site to write a public records request, judge whether a denial is valid, or decide how to appeal. For accurate, state-specific information, use a verified resource like the <a href="https://www.rcfp.org/open-government-guide/" rel="noopener">Reporters Committee Open Government Guide</a>.</p>
-      <button class="prototype-modal__dismiss" type="button" data-close>I understand</button>
+  <!-- Request ideas -->
+  <div class="rt-panel" role="tabpanel" id="panel-ideas" aria-labelledby="tab-ideas">
+    <h3>What are you trying to find?</h3>
+    <p class="rt-lede">Here’s some request ideas to get you started.</p>
+    <ul class="rt-ideas">
+      <li class="rt-idea"><a href="https://www.muckrock.com/foi/list/?q=body-worn+camera+footage&jurisdiction=iowa" target="_blank" rel="noopener">
+        <span class="rt-idea-name">Body-Worn Camera Footage</span>
+        <span class="rt-idea-desc">Footage, policies and retention schedules from local police and sheriffs.</span>
+        <span class="rt-idea-count">See requests →</span></a></li>
+      <li class="rt-idea"><a href="https://www.muckrock.com/foi/list/?q=flock+camera+contracts&jurisdiction=iowa" target="_blank" rel="noopener">
+        <span class="rt-idea-name">Flock Camera Contracts</span>
+        <span class="rt-idea-desc">License plate reader agreements, audit logs and data-sharing records.</span>
+        <span class="rt-idea-count">See requests →</span></a></li>
+      <li class="rt-idea"><a href="https://www.muckrock.com/foi/list/?q=deaths+in+custody&jurisdiction=iowa" target="_blank" rel="noopener">
+        <span class="rt-idea-name">Deaths-in-custody</span>
+        <span class="rt-idea-desc">Incident reports, autopsy findings and jail medical records.</span>
+        <span class="rt-idea-count">See requests →</span></a></li>
+    </ul>
+    <a class="rt-more" href="https://www.muckrock.com/jurisdiction/iowa/" target="_blank" rel="noopener">Show me more requests</a>
+  </div>
+
+  <!-- Frequent questions -->
+  <div class="rt-panel" role="tabpanel" id="panel-faq" aria-labelledby="tab-faq" hidden>
+    <h3>Frequent questions</h3>
+    <p class="rt-lede">Select a question to see the answer and where it comes from.</p>
+    <div class="rt-faq" id="rt-faq"></div>
+
+    <div class="rt-ask">
+      <h4>Have a question not answered here?</h4>
+      <p class="rt-lede" style="margin:0">Ask it and we’ll try to find resources in the Transparency Alliance network. Results are passages pulled word for word from NFOIC members, MuckRock Resources and RCFP open government guides, each linked back to its source.</p>
+      <form class="rt-ask-form" id="rt-ask-form" role="search">
+        <label for="rt-q" class="sr" style="position:absolute;left:-9999px">Your question</label>
+        <input class="rt-input" type="search" id="rt-q" placeholder="e.g. Can an agency charge me to review records?" autocomplete="off">
+        <button class="rt-btn" type="submit">Search resources</button>
+      </form>
+      <ul class="rt-chips" id="rt-chips" aria-label="Example questions"></ul>
+      <div class="rt-results" id="rt-results" aria-live="polite"></div>
     </div>
   </div>
 
-  <header class="site-header">
-    <nav aria-label="Main navigation">
-      <a href="#/" class="site-title">
-        <span class="site-title__name">Open Gov Toolkit</span>
-        <span class="site-title__tagline">Public records &amp; open meetings by state</span>
-      </a>
-      <ul class="nav-links">
-        <li><a href="#/about" data-nav="about">About</a></li>
-      </ul>
-    </nav>
-  </header>
+  <!-- Get help -->
+  <div class="rt-panel" role="tabpanel" id="panel-help" aria-labelledby="tab-help" hidden>
+    <h3>Get help</h3>
+    <p class="rt-lede">In Iowa, the following help is available for records requesters:</p>
+    <ul class="rt-help-list">
+      <li><a href="https://ifoic.info/ask" target="_blank" rel="noopener">Ask Herb</a><span>via the Iowa Freedom of Information Council</span></li>
+      <li><a href="https://ifoic.info/contact" target="_blank" rel="noopener">Iowa Freedom of Information Council</a></li>
+      <li><a href="https://www.rcfp.org/legal-hotline/" target="_blank" rel="noopener">RCFP Legal Hotline</a></li>
+    </ul>
+    <form class="rt-form" id="rt-help-form" novalidate>
+      <p class="rt-form-note">Or share your question and email address here and we’ll share it with our partners.
+        <details><summary>Read more</summary>
+          <span>In a live version, your question and email would go to the organizations listed above so one of them can reply directly. Nothing is posted publicly.</span>
+        </details></p>
+      <div>
+        <label for="rt-email">Email</label>
+        <input class="rt-input" type="email" id="rt-email" autocomplete="email" placeholder="you@example.com">
+      </div>
+      <div>
+        <label for="rt-question">Your question</label>
+        <textarea class="rt-input" id="rt-question" placeholder="What are you trying to get, and what is getting in the way?"></textarea>
+      </div>
+      <div><button class="rt-btn" type="submit">Share with partners</button></div>
+      <p class="rt-status" id="rt-status" role="status" hidden></p>
+    </form>
+  </div>
 
-  <main id="main"></main>
+  <!-- Fast stats -->
+  <div class="rt-panel" role="tabpanel" id="panel-stats" aria-labelledby="tab-stats" hidden>
+    <h3>Fast stats</h3>
+    <p class="rt-lede">What to expect when you file a request in Iowa.</p>
+    <ul class="rt-stats">
+      <li class="rt-stat">
+        <div class="rt-stat-num">20<small>days</small></div>
+        <p class="rt-stat-label">Up to 20 days for a response legally.</p>
+      </li>
+      <li class="rt-stat">
+        <div class="rt-stat-num">74<small>days</small></div>
+        <p class="rt-stat-label">Average response time is 74 days.</p>
+      </li>
+      <li class="rt-stat">
+        <div class="rt-stat-num">37%</div>
+        <p class="rt-stat-label">of requests are completed with documents.</p>
+        <div class="rt-meter" aria-hidden="true"><i style="width:37%"></i></div>
+      </li>
+      <li class="rt-stat">
+        <div class="rt-stat-num">15%</div>
+        <p class="rt-stat-label">of requests have an associated cost from the agency.</p>
+        <div class="rt-meter" aria-hidden="true"><i style="width:15%"></i></div>
+      </li>
+    </ul>
+    <p class="rt-stat-foot">Based on requests filed through MuckRock in Iowa.</p>
+  </div>
 
-  <footer class="site-footer">
-    <p>Open Government Toolkit is a free, open-source resource. <a href="https://github.com/morisy/opengovtoolkit">Contribute on GitHub</a>.</p>
-    <p class="disclaimer">This is not legal advice. Consult an attorney for legal questions.</p>
+  <footer class="rt-foot">
+    <span>Part of the Transparency Alliance network</span>
   </footer>
+</section>
 
-  <script src="lib/js-yaml.min.js"></script>
-  <script src="lib/marked.min.js"></script>
-  <script src="lib/minisearch.min.js"></script>
-  <script src="js/notice.js"></script>
-  <script src="js/router.js"></script>
-  <script src="js/frontmatter.js"></script>
-  <script src="js/copy.js"></script>
-  <script src="js/accordion.js"></script>
-  <script src="js/geo.js"></script>
-  <script src="js/state-page.js"></script>
-  <script src="js/home.js"></script>
-  <script src="js/search.js"></script>
-  <script src="js/app.js"></script>
-</body>
-</html>
+<script>
+(function () {
+  /* ---------- tabs ---------- */
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('.rt-tab'));
+  function select(tab, focus) {
+    tabs.forEach(function (t) {
+      var on = t === tab;
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+      t.tabIndex = on ? 0 : -1;
+      document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+    });
+    if (focus) tab.focus();
+  }
+  tabs.forEach(function (t, i) {
+    t.addEventListener('click', function () { select(t, false); });
+    t.addEventListener('keydown', function (e) {
+      var n = null;
+      if (e.key === 'ArrowRight') n = tabs[(i + 1) % tabs.length];
+      else if (e.key === 'ArrowLeft') n = tabs[(i - 1 + tabs.length) % tabs.length];
+      else if (e.key === 'Home') n = tabs[0];
+      else if (e.key === 'End') n = tabs[tabs.length - 1];
+      if (n) { e.preventDefault(); select(n, true); }
+    });
+  });
+
+  /* ---------- FAQ (answers are sample text for the prototype) ---------- */
+  var faqs = [
+    { q: 'When can I file an appeal?',
+      a: ['In Iowa you can ask for review if an agency denies your request, ignores it, or the response is incomplete. A complaint to the Iowa Public Information Board has a filing deadline measured in days from the violation, so file soon after you get the denial or notice the delay.'],
+      src: 'RCFP Open Government Guide: Iowa', url: 'https://www.rcfp.org/open-government-guide/iowa/' },
+    { q: 'What’s the average cost of a request?',
+      a: ['Most requests in Iowa finish with no fee. When an agency does charge, the law limits it to the actual cost of providing the records, such as copying or staff time to retrieve them. You can ask for an estimate up front and narrow the request if the number is too high.'],
+      src: 'MuckRock Resources: Iowa fees', url: 'https://www.muckrock.com/jurisdiction/iowa/' },
+    { q: 'Where can I find a lawyer?', via: 'via Iowa Freedom of Information Council',
+      a: ['The Iowa Freedom of Information Council can point requesters to attorneys who handle open records disputes. The RCFP Legal Hotline also offers free help to journalists.'],
+      src: 'Iowa Freedom of Information Council', url: 'https://ifoic.info/contact' }
+  ];
+  var faqEl = document.getElementById('rt-faq');
+  faqs.forEach(function (f, i) {
+    var item = document.createElement('div');
+    item.className = 'rt-faq-item';
+    var btn = document.createElement('button');
+    btn.className = 'rt-faq-q';
+    btn.type = 'button';
+    btn.id = 'faq-q' + i;
+    btn.setAttribute('aria-expanded', 'false');
+    btn.setAttribute('aria-controls', 'faq-a' + i);
+    var label = document.createElement('span');
+    label.appendChild(document.createTextNode(f.q));
+    if (f.via) {
+      var v = document.createElement('span');
+      v.className = 'rt-via';
+      v.textContent = f.via;
+      label.appendChild(v);
+    }
+    var chev = document.createElement('span');
+    chev.className = 'rt-chev';
+    chev.setAttribute('aria-hidden', 'true');
+    btn.appendChild(label);
+    btn.appendChild(chev);
+    var ans = document.createElement('div');
+    ans.className = 'rt-faq-a';
+    ans.id = 'faq-a' + i;
+    ans.hidden = true;
+    ans.setAttribute('role', 'region');
+    ans.setAttribute('aria-labelledby', btn.id);
+    f.a.forEach(function (t) {
+      var p = document.createElement('p'); p.textContent = t; ans.appendChild(p);
+    });
+    var s = document.createElement('p');
+    s.className = 'rt-src';
+    s.appendChild(document.createTextNode('Source: '));
+    var a = document.createElement('a');
+    a.href = f.url; a.target = '_blank'; a.rel = 'noopener'; a.textContent = f.src;
+    s.appendChild(a);
+    ans.appendChild(s);
+    btn.addEventListener('click', function () {
+      var open = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', open ? 'false' : 'true');
+      ans.hidden = open;
+    });
+    item.appendChild(btn);
+    item.appendChild(ans);
+    faqEl.appendChild(item);
+  });
+
+  /* ---------- "RAG" search, pre-baked sample passages ---------- */
+  var passages = [
+    { text: 'An agency may charge a fee for providing copies of public records, but the fee is limited to the actual cost of providing the service, including the cost of copying and any supervision of the examination.',
+      tags: 'cost fee fees charge copies copying price how much expensive', type: 'RCFP', source: 'Open Government Guide: Iowa, Fees', url: 'https://www.rcfp.org/open-government-guide/iowa/' },
+    { text: 'Ask the agency for a written estimate before it begins work. If the total is higher than you expected, you can narrow your request by date range, record type or custodian.',
+      tags: 'cost fee estimate narrow reduce waive price', type: 'MuckRock', source: 'MuckRock Resources, Reducing request fees', url: 'https://www.muckrock.com/jurisdiction/iowa/' },
+    { text: 'If your request is denied in whole or in part, the agency should tell you which exemption it is relying on. Keep the denial letter, because it is the starting point for any complaint or appeal.',
+      tags: 'denied denial appeal exemption complaint reject refuse', type: 'RCFP', source: 'Open Government Guide: Iowa, Appeals', url: 'https://www.rcfp.org/open-government-guide/iowa/' },
+    { text: 'Requesters who believe their rights were violated can contact the Council for guidance on next steps, including whether to file a complaint with the state board or seek legal counsel.',
+      tags: 'help lawyer attorney complaint violation legal board guidance', type: 'NFOIC member', source: 'Iowa Freedom of Information Council', url: 'https://ifoic.info/contact' },
+    { text: 'You do not need to explain why you want a record, and an agency generally cannot require you to give a reason as a condition of receiving it.',
+      tags: 'reason why purpose motive identity who can request', type: 'RCFP', source: 'Open Government Guide: Iowa, Who may request', url: 'https://www.rcfp.org/open-government-guide/iowa/' },
+    { text: 'Body camera video is often held by the police department, but the county attorney or city may also have copies. Ask for the footage, the incident number and the department’s retention policy in the same request.',
+      tags: 'body camera bodycam footage video police retention policy', type: 'MuckRock', source: 'MuckRock Resources, Police video', url: 'https://www.muckrock.com/jurisdiction/iowa/' },
+    { text: 'Agencies are expected to respond promptly. When a response will take longer, ask the agency for a date by which you can expect the records and put that date in your calendar.',
+      tags: 'deadline days response time how long wait delay late slow timeline', type: 'NFOIC member', source: 'Iowa Freedom of Information Council', url: 'https://ifoic.info/contact' },
+    { text: 'Email your request so you have a dated record, name the records as specifically as you can, and keep a copy of everything you send and receive.',
+      tags: 'file write submit how to start email tips records specific', type: 'MuckRock', source: 'MuckRock Resources, Writing a request', url: 'https://www.muckrock.com/jurisdiction/iowa/' }
+  ];
+  var stop = 'a an the and or of to in on for is are can do does i my me how what when where who why it be with at by from this that'.split(' ');
+  function tokens(s) {
+    return s.toLowerCase().replace(/[^a-z0-9\s]/g, ' ').split(/\s+/).filter(function (w) { return w.length > 1 && stop.indexOf(w) === -1; });
+  }
+  function esc(s) { return s.replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  function highlight(text, words) {
+    var out = esc(text);
+    words.forEach(function (w) {
+      if (w.length < 3) return;
+      out = out.replace(new RegExp('\\b(' + w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\w*)', 'gi'), '<mark>$1</mark>');
+    });
+    return out;
+  }
+  var qInput = document.getElementById('rt-q');
+  var results = document.getElementById('rt-results');
+  function run(query) {
+    var words = tokens(query);
+    results.textContent = '';
+    if (!words.length) return;
+    var scored = passages.map(function (p) {
+      var hay = (p.text + ' ' + p.tags).toLowerCase(), s = 0;
+      words.forEach(function (w) { if (hay.indexOf(w) !== -1) s += p.tags.indexOf(w) !== -1 ? 2 : 1; });
+      return { p: p, s: s };
+    }).filter(function (x) { return x.s > 0; }).sort(function (a, b) { return b.s - a.s; }).slice(0, 3);
+    var meta = document.createElement('p');
+    meta.className = 'rt-results-meta';
+    meta.textContent = scored.length
+      ? scored.length + ' passage' + (scored.length > 1 ? 's' : '') + ' found, shown as written in the source.'
+      : 'No passages found in this prototype’s sample set. Try different words, or use Get help.';
+    results.appendChild(meta);
+    scored.forEach(function (x) {
+      var fig = document.createElement('figure');
+      fig.className = 'rt-result';
+      fig.innerHTML = '<blockquote>' + highlight(x.p.text, words) + '</blockquote>' +
+        '<figcaption class="rt-result-src"><span class="rt-badge">' + esc(x.p.type) + '</span>' +
+        '<span>' + esc(x.p.source) + '</span>' +
+        '<a href="' + x.p.url + '" target="_blank" rel="noopener">Read full source</a></figcaption>';
+      results.appendChild(fig);
+    });
+  }
+  document.getElementById('rt-ask-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    run(qInput.value);
+  });
+  var chipList = document.getElementById('rt-chips');
+  ['Can an agency charge me to review records?', 'What if my request is denied?', 'How do I get police body camera video?'].forEach(function (q) {
+    var li = document.createElement('li');
+    var b = document.createElement('button');
+    b.type = 'button'; b.className = 'rt-chip'; b.textContent = q;
+    b.addEventListener('click', function () { qInput.value = q; run(q); });
+    li.appendChild(b);
+    chipList.appendChild(li);
+  });
+
+  /* ---------- help form (static: nothing leaves the page) ---------- */
+  document.getElementById('rt-help-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var email = document.getElementById('rt-email');
+    var q = document.getElementById('rt-question');
+    var status = document.getElementById('rt-status');
+    status.hidden = false;
+    if (!email.value.trim() || email.value.indexOf('@') < 1 || !q.value.trim()) {
+      status.textContent = 'Add a valid email address and your question so a partner can reply.';
+      return;
+    }
+    status.textContent = 'Prototype only: this form does not send anything. In a live version your question would go to the partners listed above.';
+  });
+})();
+</script>
+
+</body></html>
